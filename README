@@ -1,0 +1,29 @@
+How to use:
+
+./Moumounator_printf.sh <../path_to_your_printf> (cspduixX%) (012)
+			(sdiuxXp%) =	List of Type you want to test
+							All tested if any specified
+			(0,1,2) =	0 display failed tests only (If any specified)
+						1 display failed and succeed tests
+						2 display failed and succeed with more details
+
+Go check flag_by_type.txt to see which types are tested with which flags.
+	Only combination of types and flags with defined behavior are tested
+	In main_all.c, you can change line 13
+		#define ALLTEST 0
+	to
+		#define ALLTEST 1
+	if you want to test all types with all flags.
+
+
+
+BONUS: (not working well ATM)
+			You can use the flag '-bonus' to toggle on bonus. It's must be the first arg after your path.
+			You must have all green test of previous part. -bonus is a more advanced version.
+
+			./Moumounator_printf.sh <../path_to_your_printf> -bonus -new
+			Remove -new flag, to keep params of the last execute
+
+			-bonus are not protected. Random answer will result random behavior.
+
+
